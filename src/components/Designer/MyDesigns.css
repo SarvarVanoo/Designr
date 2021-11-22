@@ -1,0 +1,29 @@
+.mydesigns{
+    top: 65px;
+}
+
+.add-design{
+    /* margin: auto; */
+    width: 200px;
+    height: 30px;
+    color: white;
+    border-radius: 10px;
+    background-color: rgb(25, 38, 219);
+    text-align: center;
+    cursor: pointer;
+    padding: 4px;
+}
+
+.label{
+    /* width: 100%; */
+    height: 50px;
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+/* #input[type="file"]
+{
+    display: none;
+} */

@@ -1,0 +1,16 @@
+.full
+{
+  position:absolute;
+  top:0px;
+  right:0px;
+  bottom:0px;
+  left:0px;
+}
+
+.login
+{
+    position:absolute;
+    top: 44%;
+    left: 43%;
+    margin-top: 150px;
+}
