@@ -1,21 +1,38 @@
-import React from 'react'
-import './ListItem.css'
+import React from 'react';
+import './ListItem.css';
 
 function ListItem(props) {
-    const items = props.items;
-        const listItems = items.map(item=>
-            {
-
-                return(<div key="item.key">
-                    <p>{item.file}</p>
-                    <img src={item.file} alt=""/>
-                </div>)
-            })
-    return (
-        <div>
-            {listItems}
-            </div>
-    )
+	return (
+		<div style={styles.row}>
+			{props.items.map((item) => (
+				<div key={item.key} style={styles.listItem}>
+					<img src={item.file} alt={'items' + item.key} style={styles.preview} />
+					<p style={styles.key}>Image Key: {item.key}</p>
+				</div>
+			))}
+		</div>
+	);
 }
 
-export default ListItem
+export default ListItem;
+
+const styles = {
+	listItem: {
+		display: 'flex',
+		flexDirection: 'column',
+		alignItems: 'center',
+		padding: '10px 20px'
+	},
+	preview: {
+		width: '300px',
+		height: '300px',
+		border: 'solid 1px black'
+	},
+	row: {
+		display: 'flex',
+		flexDirection: 'row',
+		alignItems: 'center',
+		justifyContent: 'center',
+		flexWrap: 'wrap'
+	}
+};

@@ -1,17 +1,33 @@
-import React, { Component } from 'react'
+import React from 'react';
+import { Link } from 'react-router-dom';
 import './Welcome.css';
-import {useHistory} from "react-router-dom";
+// import { useHistory } from 'react-router-dom';
 
-function Welcome(){
-    let history = useHistory();
-        return (
-            <div className="full">
-               <h1 style={{marginTop:50}}>Welcome</h1> 
-               <button className="button" onClick={()=>{history.push('/login')}}>Login</button>
-               
-               <button className="button" onClick={()=>{history.push('/register')}}>Register</button>
-            </div>
-        ) 
+export default function Welcome() {
+	// when using a browser router, we get an implicit property "navigation"
+	// let history = useHistory();
+
+	return (
+		<div className="full">
+			<h1 style={{ marginTop: 50 }}>Designr</h1>
+			<div style={styles.row}>
+				<Link to={'/login'} className="button">
+					Login
+				</Link>
+
+				<Link to={'/register'} className="button">
+					Register
+				</Link>
+			</div>
+		</div>
+	);
 }
 
-export default Welcome
+export const styles = {
+	row: {
+		display: 'flex',
+		flexDirection: 'row',
+		alignItems: 'center',
+		justifyContent: 'center'
+	}
+};
